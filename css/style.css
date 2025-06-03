@@ -13,7 +13,7 @@
   --color-primary: #9EBC9F;
   --color-secondary: #D3B88C;
   --color-accent: #E9DAC4;
-  --color-background: #656256;
+  --color-accent2: #656256;
   --color-text: #230903;
   --color-light-text: #5D1809;
   --color-border: #000000;
@@ -23,9 +23,6 @@ body {
   font-family: var(--font-secondary);
   color: var(--color-text);
   background-color: var(--color-background);
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
 }
 
 h1, h2, h3, h4, h5, h6 {

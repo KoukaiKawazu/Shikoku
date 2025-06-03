@@ -1,12 +1,20 @@
 ﻿.header__nav {
-    display: flexbox;
     overflow: hidden;
 }
 
-.header__logo{
+.header__logo {
     flex: 1;
-    display: flexbox;
-
+    display: flex; 
     position: relative;
     padding: 20px;
+    align-items: center;
+}
+
+.header__menu {
+    display: flex;              
+    list-style: none;           
+    gap: 20px;                  
+    align-items: center;
+    margin: 0;
+    padding: 0;
 }
