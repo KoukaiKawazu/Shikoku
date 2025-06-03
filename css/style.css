@@ -1,7 +1,7 @@
 ﻿   /* Import other CSS files */
-@import url('reset.css'); /* Reset styles */
-@import url('layout.css'); /* Layout-specific styles */
-@import url('components.css'); /* Reusable components */
+@import url('sections/header.css'); /* Reset styles */
+@import url('sections/main.css'); /* Layout-specific styles */
+@import url('sections/footer.css'); /* Reusable components */
 
 /* Root Variables */
 :root {
