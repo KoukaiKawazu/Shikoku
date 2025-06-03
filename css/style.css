@@ -1,7 +1,4 @@
-﻿body
-{
-    
-/* Import other CSS files */
+﻿   /* Import other CSS files */
 @import url('reset.css'); /* Reset styles */
 @import url('layout.css'); /* Layout-specific styles */
 @import url('components.css'); /* Reusable components */
