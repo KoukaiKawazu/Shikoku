@@ -1,20 +1,24 @@
 ﻿.header__nav {
-    overflow: hidden;
+    display: flex;
+    width: 100%;
+    align-items: center; 
+}
+
+.header__logo,
+.header__menu {
+    width: 50%;
+    display: flex;
+    align-items: center; 
 }
 
 .header__logo {
-    flex: 1;
-    display: flex; 
-    position: relative;
-    padding: 20px;
-    align-items: center;
+    justify-content: flex-start;
+    background-color: var(--color-primary);
 }
 
 .header__menu {
-    display: flex;              
-    list-style: none;           
-    gap: 20px;                  
-    align-items: center;
-    margin: 0;
-    padding: 0;
+    justify-content: center;
+    gap: 250px;
+    list-style: none;
+    background-color: var(--color-secondary);
 }
