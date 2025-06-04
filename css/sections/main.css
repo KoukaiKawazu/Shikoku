@@ -1,1 +1,37 @@
-﻿
+﻿.hero {
+    display: flex;
+    height: 40%;
+    width: 40%;
+}
+
+.hero__text {
+    align-content: center;
+    border:1px solid;
+    border-color: aliceblue;
+    border-radius: 5px;
+    margin: 1px;
+    padding: 5px;
+    flex: 0.7;
+}
+
+.hero__logo {
+    align-content: center;
+    border:1px solid;
+    border-color: aliceblue;
+    border-radius: 5px;
+    margin: 1px;
+    padding: 5px;
+    flex: 1;
+}
+
+@media (max-width: 1700px) {
+  .hero {
+    flex-direction: column; /* stack vertically */
+    align-items: center;
+    text-align: center;
+  }
+
+  .left, .right {
+    max-width: 100%;
+  }
+}

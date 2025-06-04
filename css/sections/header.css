@@ -1,7 +1,19 @@
 ﻿.nav {
   position: fixed;
-  width: 10%;
+  width: 20%;
   height: 100%;
   margin: 2%;
   align-content: center;
+}
+
+@media (max-width: 600px) {
+  .nav {
+    position: relative;
+    height: auto;
+    margin: 0;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 0;
+  }
 }
