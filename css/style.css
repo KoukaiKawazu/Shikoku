@@ -1,39 +1,65 @@
 ﻿   /* Import other CSS files */
-@import url('sections/header.css'); /* Reset styles */
-@import url('sections/main.css'); /* Layout-specific styles */
-@import url('sections/footer.css'); /* Reusable components */
+@import url('sections/header.css');
+@import url('sections/main.css');
+@import url('sections/footer.css');
 
 /* Root Variables */
 :root {
   /* Font families */
-  --font-primary: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  --font-secondary: 'Georgia', serif;
+  --font-primary: 'Arial', sans-serif;
+  --font-secondary: 'Candara', Helvetica, Arial, sans-serif;
+
 
   /* Colors */
-  --color-primary: #9EBC9F;
+  --color-primary: #51725256;
   --color-secondary: #D3B88C;
   --color-accent: #E9DAC4;
   --color-accent2: #656256;
-  --color-text: #230903;
+  --color-text: #ecececde;
   --color-light-text: #5D1809;
   --color-border: #000000;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+body{
+  background: linear-gradient(to right, #000000, #3f3d3d);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-body, html {
-  width: 100%;
-  height: 100%;
-  font-family: var(--font-secondary);
-  color: var(--color-text);
-  background-color: var(--color-accent2);
-}
-
-h1, h2, h3, h4, h5, h6 {
+h1 {
   font-family: var(--font-primary);
+}
+
+h2 {
+  font-family: var(--font-secondary);
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+  margin-bottom: 80px;
+}
+
+a {
+  font-family: var(--font-secondary);
+  text-decoration: none;
+  user-select: none;
   color: var(--color-text);
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+a:hover {
+  text-shadow:
+    0 0 5px var(--color-text),
+    0 0 10px var(--color-text),
+    0 0 20px var(--color-text);
+  transform: scale(1.1);
+}
+
+a:active {
+  color: var(--color-text);
+  transform: scale(1.3);
 }

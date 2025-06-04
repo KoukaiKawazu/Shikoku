@@ -1,24 +1,7 @@
-﻿.header__nav {
-    display: flex;
-    width: 100%;
-    align-items: center; 
-}
-
-.header__logo,
-.header__menu {
-    width: 50%;
-    display: flex;
-    align-items: center; 
-}
-
-.header__logo {
-    justify-content: flex-start;
-    background-color: var(--color-primary);
-}
-
-.header__menu {
-    justify-content: center;
-    gap: 250px;
-    list-style: none;
-    background-color: var(--color-secondary);
+﻿.nav {
+  position: fixed;
+  width: 10%;
+  height: 100%;
+  margin: 2%;
+  align-content: center;
 }
