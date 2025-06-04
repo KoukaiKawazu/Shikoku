@@ -78,3 +78,9 @@ p {
   color: var(--color-text);
   letter-spacing: 4px;
 }
+
+button {
+  padding: 8px 16px;
+  margin: 0 5px;
+  font-size: 16px;
+}

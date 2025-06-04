@@ -34,28 +34,47 @@
 
 .about {
   scroll-snap-align: start;
-  height: 100vh;         
-  display: flex;          
+  height: 100vh;
+  display: flex;             /* side-by-side layout */
   justify-content: center;
-  align-items: center;    
-  width: 60%;             
-  margin: 0 auto;   
+  align-items: center;
+  width: 60%;
+  margin: 0 auto;
+  position: relative;
+  gap: 20px;                 /* spacing between text and logo */
+  box-sizing: border-box;
 }
 
+.about-track {
+  flex: 1;
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+  overflow: hidden;
+}
+
+/* Each slide takes full width of about-track */
 .about__text {
-    align-content: center;
-    background-color: #ffffff30;
-    border-radius: 15px;
-    margin: 1px;
-    padding: 25px;
-    flex: 0.7;
-    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+  flex: 0 0 100%;            /* fixed width = width of about-track */
+  background-color: #ffffff30;
+  border-radius: 15px;
+  margin: 1px;
+  padding: 25px;
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+  box-sizing: border-box;
 }
 
 .about__text:hover {
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.7);
   transform: scale(1.04);
   cursor: pointer;
+}
+
+.controls {
+  position: absolute;
+  bottom: 100px;
+  left: 140px;
+  display: flex;
+  gap: 20px;
 }
 
 .about__logo {
