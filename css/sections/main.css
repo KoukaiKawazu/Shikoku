@@ -1,37 +1,106 @@
 ﻿.hero {
-    display: flex;
-    height: 40%;
-    width: 40%;
+  scroll-snap-align: start;
+  height: 100vh;          
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  grid-template-rows: auto auto;         
+  gap: 20px;                             
+  width: 60%;             
+  margin: 0 auto;         
 }
 
-.hero__text {
+.hero__text,
+.hero__text2,
+.hero__text3,
+.hero__text4 {
     align-content: center;
     border:1px solid;
-    border-color: aliceblue;
+    border-color: var(--color-border);
     border-radius: 5px;
-    margin: 1px;
+    margin: 10px;
     padding: 5px;
     flex: 0.7;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.hero__logo {
+.hero__text:hover,
+.hero__text2:hover,
+.hero__text3:hover,
+.hero__text4:hover {
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.7);
+  transform: scale(1.01);
+  cursor: pointer;
+}
+
+.about {
+  scroll-snap-align: start;
+  height: 100vh;         
+  display: flex;          
+  justify-content: center;
+  align-items: center;    
+  width: 60%;             
+  margin: 0 auto;   
+}
+
+.about__text {
     align-content: center;
-    border:1px solid;
-    border-color: aliceblue;
-    border-radius: 5px;
+    background-color: #ffffff30;
+    border-radius: 15px;
     margin: 1px;
-    padding: 5px;
+    padding: 25px;
+    flex: 0.7;
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+.about__text:hover {
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.7);
+  transform: scale(1.04);
+  cursor: pointer;
+}
+
+.about__logo {
+    align-content: center;
+    margin: 5px;
     flex: 1;
 }
 
-@media (max-width: 1700px) {
-  .hero {
-    flex-direction: column; /* stack vertically */
-    align-items: center;
-    text-align: center;
-  }
+.rounded-img {
+    border-radius: 30px;
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
 
-  .left, .right {
-    max-width: 100%;
-  }
+.rounded-img:hover {
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.7);
+    transform: scale(1.04);
+    cursor: pointer;
+}
+
+.referenzen {
+  scroll-snap-align: start;
+  height: 100vh;          
+  display: flex;          
+  justify-content: center;
+  align-items: center;    
+  width: 60%;             
+  margin: 0 auto;
+}
+
+.referenzen__box1,
+.referenzen__box2,
+.referenzen__box3 {
+    height: 90%;
+    align-content: center;
+    border:2px solid;
+    border-color: var(--color-border);
+    margin: 10px;
+    flex: 1;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.referenzen__box1:hover,
+.referenzen__box2:hover,
+.referenzen__box3:hover {
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.7);
+    transform: scale(1.01);
+    cursor: pointer;
 }
