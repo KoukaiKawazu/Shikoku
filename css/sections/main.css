@@ -18,15 +18,15 @@
 
 .hero__group {
   display: grid;
+  justify-content: center;
   grid-template-columns: repeat(3, 1fr); 
   grid-template-rows: 1fr 1fr;        
-  gap: 20px;  
-  padding: 4%;                           
-  width: 60%;
-  height: 80%;    
+  gap: 25px;  
+  padding: 10%;                           
+  width: 50%;
+  height: 50%;    
   opacity: 1;         
   margin: 0 auto;      
-  position: relative; 
 }
 
 .hero__text,
@@ -35,9 +35,10 @@
 .hero__text4,
 .hero__text5,
 .hero__text6 {
-    background-color: var(--color-plates);
-    width: 95%;         
-    height: 95%;       
+
+    width: 100%;         
+    height: 100%;  
+    display: inline-block;     
     overflow: hidden;    
     text-overflow: ellipsis;
     border:1px solid;
@@ -94,7 +95,6 @@
 }
 
 .about__text {           
-  background-color: var(--color-plates);
   border-radius: var(--radius-md);
   margin: 1px;
   padding: 25px;
@@ -104,7 +104,6 @@
 }
 
 .about__text:hover {
-  box-shadow: var(--box-shadow);
   transform: scale(1.04);
   opacity: 1;
 }
@@ -116,6 +115,8 @@
 }
 
 .rounded-img {
+  float: right;
+  margin: 10px;
   border-radius: var(--radius-md);
   transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
 }
@@ -125,10 +126,6 @@
   transform: scale(1.04);
 }
 
-.referenzen {
-  scroll-snap-align: start;
-  height: 100vh; 
-}
 .portfolio {
   scroll-snap-align: start;
   height: 100vh;          
@@ -174,6 +171,43 @@
   min-height: 100%;
   width: auto;
   height: auto;
+}
+
+.referenzen {
+  scroll-snap-align: start;
+  height: 100vh; 
+}
+
+.pictures {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  padding: 10%;              /* reduce padding from 10% */
+  margin: 0 auto;
+  gap: 200px;                /* space between circles */
+  flex-wrap: wrap;          /* allows circles to wrap when needed */
+}
+
+.picture {
+  width: 200px;
+  height: 200px;
+  border-style: solid;
+  border-color: #ffffff;
+  border-radius: 50%;
+  overflow: hidden;
+  transition:
+    box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.picture:hover {
+  box-shadow: var(--box-shadow);
+  transform: scale(1.04);
+}
+
+.picture:active {
+  box-shadow: var(--box-shadow);
+  transform: scale(1.04);
 }
 
 .kontakt {
