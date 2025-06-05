@@ -1,100 +1,135 @@
-﻿.hero {
+﻿.home {
   scroll-snap-align: start;
-  height: 100vh;          
+  height: 100vh;    
+}
+
+.home__group {
+  display: flex;             
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  margin: 0 auto;           
+}
+
+.hero {
+  scroll-snap-align: start;
+  height: 100vh;            
+}
+
+.hero__group {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); 
-  grid-template-rows: auto auto;         
-  gap: 20px;                             
-  width: 60%;             
-  margin: 0 auto;         
+  grid-template-columns: repeat(3, 1fr); 
+  grid-template-rows: 1fr 1fr;        
+  gap: 20px;  
+  padding: 4%;                           
+  width: 60%;
+  height: 80%;    
+  opacity: 1;         
+  margin: 0 auto;      
+  position: relative; 
 }
 
 .hero__text,
 .hero__text2,
 .hero__text3,
-.hero__text4 {
-    align-content: center;
+.hero__text4,
+.hero__text5,
+.hero__text6 {
+    background-color: var(--color-plates);
+    width: 95%;         
+    height: 95%;       
+    overflow: hidden;    
+    text-overflow: ellipsis;
     border:1px solid;
     border-color: var(--color-border);
-    border-radius: 5px;
-    margin: 10px;
-    padding: 5px;
-    flex: 0.7;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: var(--radius-md);
+    padding: 2%;
+    flex: 1;
+    transition: 
+      transform 0.3s ease-in-out, 
+      box-shadow 0.3s ease-in-out, 
+      opacity 0.3s ease-in-out;
 }
 
 .hero__text:hover,
 .hero__text2:hover,
 .hero__text3:hover,
-.hero__text4:hover {
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.7);
-  transform: scale(1.01);
+.hero__text4:hover,
+.hero__text5:hover,
+.hero__text6:hover {
+  box-shadow: var(--box-shadow);
   cursor: pointer;
+  transform: scale(1.3);
+  z-index: 10;
+}
+
+.hero__group:hover .hero__text:not(:hover),
+.hero__group:hover .hero__text2:not(:hover),
+.hero__group:hover .hero__text3:not(:hover),
+.hero__group:hover .hero__text4:not(:hover),
+.hero__group:hover .hero__text5:not(:hover),
+.hero__group:hover .hero__text6:not(:hover) {
+  opacity: 0.2;
+}
+
+.logo-image {
+  float: left;
+  width: 30%;
+  height: 30%;
+  margin: 10px;
+  object-fit: contain;  
+  display: block;     
 }
 
 .about {
   scroll-snap-align: start;
   height: 100vh;
-  display: flex;             /* side-by-side layout */
+  display: flex;             
   justify-content: center;
   align-items: center;
   width: 60%;
   margin: 0 auto;
-  position: relative;
-  gap: 20px;                 /* spacing between text and logo */
+  position: relative;              
   box-sizing: border-box;
 }
 
-.about-track {
-  flex: 1;
-  display: flex;
-  transition: transform 0.4s ease-in-out;
-  overflow: hidden;
-}
-
-/* Each slide takes full width of about-track */
-.about__text {
-  flex: 0 0 100%;            /* fixed width = width of about-track */
-  background-color: #ffffff30;
-  border-radius: 15px;
+.about__text {           
+  background-color: var(--color-plates);
+  border-radius: var(--radius-md);
   margin: 1px;
   padding: 25px;
-  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+  opacity: 0.5;
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out, opacity 0.4s ease-in-out;
   box-sizing: border-box;
 }
 
 .about__text:hover {
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.7);
+  box-shadow: var(--box-shadow);
   transform: scale(1.04);
-  cursor: pointer;
-}
-
-.controls {
-  position: absolute;
-  bottom: 100px;
-  left: 140px;
-  display: flex;
-  gap: 20px;
+  opacity: 1;
 }
 
 .about__logo {
-    align-content: center;
-    margin: 5px;
-    flex: 1;
+  align-content: center;
+  margin: 5px;
+  flex: 1;
 }
 
 .rounded-img {
-    border-radius: 30px;
-    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+  border-radius: var(--radius-md);
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
 }
 
 .rounded-img:hover {
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.7);
-    transform: scale(1.04);
-    cursor: pointer;
+  box-shadow: var(--box-shadow);
+  transform: scale(1.04);
 }
 
 .referenzen {
+  scroll-snap-align: start;
+  height: 100vh; 
+}
+.portfolio {
   scroll-snap-align: start;
   height: 100vh;          
   display: flex;          
@@ -104,22 +139,49 @@
   margin: 0 auto;
 }
 
-.referenzen__box1,
-.referenzen__box2,
-.referenzen__box3 {
-    height: 90%;
-    align-content: center;
-    border:2px solid;
-    border-color: var(--color-border);
-    margin: 10px;
-    flex: 1;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+.portfolio__box {
+  background-color: var(--color-plates);
+  position: relative;               
+  flex: 0.5 1 0;                    
+  overflow: hidden;                 
+  transition:
+    flex-grow 1.2s ease-in-out,
+    box-shadow 0.3s ease-in-out,
+    opacity 0.3s ease-in-out;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  margin: 5px;
+  height: 90%; 
+                     
 }
 
-.referenzen__box1:hover,
-.referenzen__box2:hover,
-.referenzen__box3:hover {
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.7);
-    transform: scale(1.01);
-    cursor: pointer;
+.portfolio__box:hover {
+  flex-grow: 8;
+  opacity: 1;                 
+  box-shadow: var(--box-shadow);
+  cursor: pointer;
+}
+
+.portfolio:hover .portfolio__box:not(:hover) {
+  opacity: 0.4;                  
+}
+
+.portfolio__box img {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+}
+
+.kontakt {
+  scroll-snap-align: start;
+  height: 80vh;          
+  display: flex;          
+  justify-content: center;
+  align-items: center;    
+  width: 60%;             
+  margin: 0 auto;
 }

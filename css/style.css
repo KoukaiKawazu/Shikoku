@@ -8,7 +8,8 @@
   /* Font families */
   --font-primary: 'Arial', sans-serif;
   --font-secondary: 'Candara', Helvetica, Arial, sans-serif;
-
+  --box-shadow: 0 2px 15px rgba(240, 235, 231, 0.7);
+  --radius-md: 8px;
 
   /* Colors */
   --color-primary: #102C0C;
@@ -16,23 +17,68 @@
   --color-accent: #6DB398;
   --color-accent2: #916D40;
   --color-text: #F0EBE7;
-  --color-border: #090B0B;
+  --color-border: #F0EBE7;
+  --color-plates: #53A285;
+  --color-background: #000000;
 }
 
-body{
+html, body{
   
-  background: linear-gradient(to right, var(--color-accent),var(--color-accent2));
+  margin: 0;
+  padding: 0;
+  height: 100%;  
+  background: linear-gradient(to left, var(--color-accent),var(--color-background));
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
 main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
+  flex: 1;                     
+  display: flex;              
+  flex-direction: column;     
 }
 
+
+footer {
+  background-color: var(--color-plates);
+  opacity: 0.4;
+  display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 0;                 
+  transition:
+    opacity 0.4s ease-in-out;
+}
+
+footer:hover {
+  opacity: 1;
+}
+
+.shimmer-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1; /* Always behind other content */
+  pointer-events: none; /* So it doesn't block clicks */
+
+  background-image: 
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px);
+
+  background-size: 40px 40px;
+  animation: shimmer 2s linear infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 40px 40px;
+  }
+}
 h1 {
   font-family: var(--font-primary);
   color: var( --color-accent2);
@@ -77,10 +123,4 @@ p {
   font-family: var(--font-secondary);
   color: var(--color-text);
   letter-spacing: 4px;
-}
-
-button {
-  padding: 8px 16px;
-  margin: 0 5px;
-  font-size: 16px;
 }
